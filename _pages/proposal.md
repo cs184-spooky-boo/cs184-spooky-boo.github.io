@@ -8,7 +8,7 @@ permalink: /
 
 Group Members: Anya Agarwal, Christy Quang, Janani Sriram, Tia Jain
 
-![pumpkin](assets/img/proposal/pumpkin.jpeg){:style="display:block; margin-left: auto; margin-right: auto; width:50%;"}
+![pumpkin](/assets/img/proposal/pumpkin.jpeg){:style="display:block; margin-left: auto; margin-right: auto; width:50%;"}
 
 ### Summary
 
