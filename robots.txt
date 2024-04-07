@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://cs184-spooky-boo.github.io/sitemap.xml
+Sitemap: https://cs184-spooky-boo.github.io//sitemap.xml
