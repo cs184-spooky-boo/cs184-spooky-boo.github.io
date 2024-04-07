@@ -1,3 +1,14 @@
+# Spooky Boo
+CS 184 Spring 2024 Final Project 
+
+Team 45: Anya Agarwal, Christy Quang, Janani Sriram, Tia Jain
+
+## Hosting Local Server
+1. Go to https://jekyllrb.com/docs/installation/ and install Jekyll if it's not already downloaded on your computer.
+2. Run `ruby -v` in your terminal to verify that it's installed.
+3. Run `gem install jekyll`.
+4. Run `bundle exec jekyll serve` to view the live server! Will most likely need to copy and paste the link shown in your terminal.
+
 # al-folio
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [maintainers]: https://img.shields.io/badge/maintainers-3-success.svg 'Number of maintainers'
