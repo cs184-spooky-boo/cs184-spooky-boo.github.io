@@ -10,7 +10,7 @@ permalink: /milestone
 ## Important Links
 
 - [Slides](https://docs.google.com/presentation/d/1-0b0kxSXW2xQeXWxNEVVtFc78-RBjcDXZzXNmsWsY2E/edit?usp=sharing)
-- [Recording]()
+- [Recording](https://drive.google.com/file/d/1dMEocXvS5zHEgg23FenEAaJRBPdBo_4F/view?usp=sharing)
 
 <br>
 
