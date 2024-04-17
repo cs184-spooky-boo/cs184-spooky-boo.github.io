@@ -5,7 +5,7 @@ permalink: /milestone
 ---
 
 # Milestone
-![ghost](/assets/img/proposal/ghost.png){:style="display:block; margin-left: auto; margin-right: auto; width:50%;"}
+![ghost](../assets/img/proposal/ghost.png){:style="display:block; margin-left: auto; margin-right: auto; width:50%;"}
 
 
 ## Important Links
@@ -41,7 +41,7 @@ $$
 - $$v_{\text{wind}}$$: Velocity of the wind
 - $$v_{i,j}$$: Velocity of the object at position $${(i,j)}$$
 
-![wind](/assets/img/proposal/wind.gif){:style="display:block; margin-left: auto; margin-right: auto; width:50%;"}
+![wind](/assets/img/milestone/wind.gif){:style="display:block; margin-left: auto; margin-right: auto; width:50%;"}
 
 #### Ghost Cloth
 - Blinn Phong Shader
@@ -63,7 +63,7 @@ $$
             - Set it high to show brighter borders on surface edges (drastic fade)
 - Changed the length of the cloth to be longer and resemble the shape of a ghost
 - Fog/smoke
-    - Attempted adding near the ghost's cloth to create a more ethereal visual by modifying `Custom.frag` (not successful) based on this [article](https://vicrucann.github.io/tutorials/osg-shader-fog/)
+    - Attempted adding near the ghost's cloth to create a more ethereal visual by modifying `Custom.frag` based on this [article](https://vicrucann.github.io/tutorials/osg-shader-fog/) — this was not successful
 
 #### Modeling Additional Objects in Scene
 - Modeled pumpkin, table, chair, candle, teddy bear, cello, fox, and a toilet in Autodesk Maya
