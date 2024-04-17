@@ -107,18 +107,117 @@
 
 <h2 id="important-links">Important Links</h2>
 
-<p>Link to [slides]</p>
-
-<p>Link to [recording]</p>
+<ul>
+  <li><a href="https://docs.google.com/presentation/d/1-0b0kxSXW2xQeXWxNEVVtFc78-RBjcDXZzXNmsWsY2E/edit?usp=sharing" rel="external nofollow noopener" target="_blank">Slides</a></li>
+  <li><a href="">Recording</a></li>
+</ul>
 
 <h2 id="accomplishments">Accomplishments</h2>
+<p>For our project, we first worked on incorporating wind simulation to our existing cloth simulator from Homework 4 because this would be an essential component towards making our scene more realistic, factoring in the physical dynamic effects on objects.</p>
+
+<p>Additionally, we manipulated the shader (starting point was using the Blinn Phong shader) for the ghost cloth to have it appear more transparent/translucent.</p>
+
+<p>Lastly, we learned how to use Autodesk Maya to model several of the objects that we will have in our scene, such as the pumpkin, table, chair, etc.</p>
 
 <h2 id="preliminary-results">Preliminary Results</h2>
+<h4 id="wind">Wind</h4>
+<p>We first added wind simulation by modifying <code class="language-plaintext highlighter-rouge">Cloth::simulate</code> in <code class="language-plaintext highlighter-rouge">cloth.cpp</code>. The idea is to add wind to <code class="language-plaintext highlighter-rouge">external_accelerations</code>, similar to adding the impact of gravity. Wind is defined as a force that acts on the cloth.</p>
+
+<p>In the loop where the point mass positions are updated at each time step, we use the following formula below to calculate wind force which is then added to <code class="language-plaintext highlighter-rouge">pointMass.forces</code>.</p>
+
+\[F_{\text{wind}}(i,j) = C_{\text{wind}} [n_{i,j} \cdot (v_{\text{wind}} - v_{i,j})] n_{i,j}\]
+
+<ul>
+  <li>\(F_{\text{wind}}(i,j)\): Force of wind at position \({(i,j)}\)</li>
+  <li>\(C_{\text{wind}}\): Constant that changes overall wind force</li>
+  <li>\(n_{i,j}\): Normal with <code class="language-plaintext highlighter-rouge">pointMass.normal()</code>
+</li>
+  <li>\(v_{\text{wind}}\): Velocity of the wind</li>
+  <li>\(v_{i,j}\): Velocity of the object at position \({(i,j)}\)</li>
+</ul>
+
+<h4 id="ghost-cloth">Ghost Cloth</h4>
+<ul>
+  <li>Blinn Phong Shader
+    <ul>
+      <li>Coefficient changes:
+        <ul>
+          <li>Diffuse: No change (wanted to keep the white color)</li>
+          <li>Ambient: Changed to <code class="language-plaintext highlighter-rouge">0</code> so that the base color is black</li>
+          <li>Specular: Increased it</li>
+        </ul>
+      </li>
+      <li>Increase density in GUI to <code class="language-plaintext highlighter-rouge">100 g/m^2</code> to make it slightly heavier</li>
+      <li>Decrease <code class="language-plaintext highlighter-rouge">k_s</code> to <code class="language-plaintext highlighter-rouge">500 N/m</code> for a tighter spring:</li>
+    </ul>
+  </li>
+  <li>Bump mapping: Downloaded a pic of a bed sheet to mimic the nature of a thin sheet without having to render each fiber</li>
+  <li>Extra parameters
+    <ul>
+      <li>Used this <a href="https://manual.keyshot.com/manual/materials/material-types/advanced-material/" rel="external nofollow noopener" target="_blank">article</a> to learn about different material types and as a baseline of what to have the different values equal to
+        <ul>
+          <li>Sheen: Color of our reflection
+            <ul>
+              <li>Set to lighter shade of white to appear brighter</li>
+            </ul>
+          </li>
+          <li>Roughness: Set high since we wanted light to be evenly spread</li>
+          <li>Backscatter: Light scattered throughout the entire object
+            <ul>
+              <li>Provides soft effect</li>
+            </ul>
+          </li>
+          <li>Edginess: How far the sheen spreads across the surface
+            <ul>
+              <li>Set it high to show brighter borders on surface edges (drastic fade)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Fog/smoke
+    <ul>
+      <li>Attempted adding near the ghost’s cloth to create a more ethereal visual by modifying <code class="language-plaintext highlighter-rouge">Custom.frag</code> (not successful) based on this <a href="https://vicrucann.github.io/tutorials/osg-shader-fog/" rel="external nofollow noopener" target="_blank">article</a>
+</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="modeling-additional-objects-in-scene">Modeling Additional Objects in Scene</h4>
+<ul>
+  <li>Modeled pumpkin, table, chair, teddy bear, cello, fox, and a toilet in Autodesk Maya</li>
+  <li>Need to import models and update codebase so it integrates with the sphere and cloth collision (ghost)</li>
+</ul>
 
 <h2 id="reflection">Reflection</h2>
+<p>Overall, we thought that our ghost cloth appearance is realistic and that the wind effect works well, but there’s a couple of issues with our “ghost” model and signficant details that we’d like to incorporate later on.</p>
+
+<p>Incorporating wind was challenging and fog was especially difficult as well. There are a couple of ideas we have surrounding fog but we’re not really sure the best way to approach them.</p>
+
+<p>For modeling, we had to consider how the shader would be overlaid onto the model which made the overall appearance of the pumpkin less detailed than we wanted to, however this is subject to change.</p>
+
+<p>Our biggest hurdle is figuring out how to integrate our models with our current “ghost” collision (consists of a sphere and plane). We recognized that these two objects were able to be in the same scene because they are different <code class="language-plaintext highlighter-rouge">.json</code> files under <code class="language-plaintext highlighter-rouge">/scene</code> but this is tricky to implement with the models we created on Autodesk Maya since they will be converted to <code class="language-plaintext highlighter-rouge">.dae</code> files. We will be going to office hours to get help on this :’).</p>
 
 <h2 id="next-steps">Next Steps</h2>
+<p>We are a tiny bit behind schedule for our initial timeline since there were some obstacles that left us stumped for a longer duration than intended.</p>
 
+<p>Below are the items we intend on completing:</p>
+<ul>
+  <li>Generate fog/smoke surrounding the ghost’s cloth</li>
+  <li>Add ghost face to the cloth</li>
+  <li>Integrate all objects into one scene (import models and update existing codebase)</li>
+  <li>Refine textures and shaders within all objects
+    <ul>
+      <li>Ex: Wax dripping, flickering candle light casting shadows to the surrounding objects</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Stretch Goals:</p>
+<ul>
+  <li>User interaction with scene (ex: functionality to move the ghost)</li>
+</ul>
 
 </div>
     </div>
