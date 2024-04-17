@@ -5,7 +5,7 @@ permalink: /milestone
 ---
 
 # Milestone
-![ghost](../assets/img/proposal/ghost.png){:style="display:block; margin-left: auto; margin-right: auto; width:50%;"}
+![ghost](/imgs/ghost.png){:style="display:block; margin-left: auto; margin-right: auto; width:50%;"}
 
 
 ## Important Links
@@ -41,7 +41,7 @@ $$
 - $$v_{\text{wind}}$$: Velocity of the wind
 - $$v_{i,j}$$: Velocity of the object at position $${(i,j)}$$
 
-![wind](/assets/img/milestone/wind.gif){:style="display:block; margin-left: auto; margin-right: auto; width:50%;"}
+![wind](/imgs/wind.gif){:style="display:block; margin-left: auto; margin-right: auto; width:50%;"}
 
 #### Ghost Cloth
 - Blinn Phong Shader
