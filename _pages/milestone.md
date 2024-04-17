@@ -5,7 +5,7 @@ permalink: /milestone
 ---
 
 # Milestone
-![ghost](/assets/img/milestone/ghost.png){:style="display:block; margin-left: auto; margin-right: auto; width:50%;"}
+![ghost](/assets/img/proposal/ghost.png){:style="display:block; margin-left: auto; margin-right: auto; width:50%;"}
 
 ## Important Links
 
