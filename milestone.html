@@ -104,6 +104,7 @@
     <div class="container mt-5">
       <div class="page">
   <h1 id="milestone">Milestone</h1>
+<p><img src="/assets/img/milestone/ghost.png" alt="ghost" style="display:block; margin-left: auto; margin-right: auto; width:50%;"></p>
 
 <h2 id="important-links">Important Links</h2>
 
@@ -112,12 +113,16 @@
   <li><a href="">Recording</a></li>
 </ul>
 
+<p><br></p>
+
 <h2 id="accomplishments">Accomplishments</h2>
 <p>For our project, we first worked on incorporating wind simulation to our existing cloth simulator from Homework 4 because this would be an essential component towards making our scene more realistic, factoring in the physical dynamic effects on objects.</p>
 
 <p>Additionally, we manipulated the shader (starting point was using the Blinn Phong shader) for the ghost cloth to have it appear more transparent/translucent.</p>
 
 <p>Lastly, we learned how to use Autodesk Maya to model several of the objects that we will have in our scene, such as the pumpkin, table, chair, etc.</p>
+
+<p><br></p>
 
 <h2 id="preliminary-results">Preliminary Results</h2>
 <h4 id="wind">Wind</h4>
@@ -136,6 +141,8 @@
   <li>\(v_{i,j}\): Velocity of the object at position \({(i,j)}\)</li>
 </ul>
 
+<p><img src="/assets/img/milestone/wind.gif" alt="pumpkin" style="display:block; margin-left: auto; margin-right: auto; width:50%;"></p>
+
 <h4 id="ghost-cloth">Ghost Cloth</h4>
 <ul>
   <li>Blinn Phong Shader
@@ -147,7 +154,7 @@
           <li>Specular: Increased it</li>
         </ul>
       </li>
-      <li>Increase density in GUI to <code class="language-plaintext highlighter-rouge">100 g/m^2</code> to make it slightly heavier</li>
+      <li>Increase density in GUI to <code class="language-plaintext highlighter-rouge">30 g/m^2</code> to make it slightly heavier</li>
       <li>Decrease <code class="language-plaintext highlighter-rouge">k_s</code> to <code class="language-plaintext highlighter-rouge">500 N/m</code> for a tighter spring:</li>
     </ul>
   </li>
@@ -176,6 +183,7 @@
       </li>
     </ul>
   </li>
+  <li>Changed the length of the cloth to be longer and resemble the shape of a ghost</li>
   <li>Fog/smoke
     <ul>
       <li>Attempted adding near the ghost’s cloth to create a more ethereal visual by modifying <code class="language-plaintext highlighter-rouge">Custom.frag</code> (not successful) based on this <a href="https://vicrucann.github.io/tutorials/osg-shader-fog/" rel="external nofollow noopener" target="_blank">article</a>
@@ -186,9 +194,17 @@
 
 <h4 id="modeling-additional-objects-in-scene">Modeling Additional Objects in Scene</h4>
 <ul>
-  <li>Modeled pumpkin, table, chair, teddy bear, cello, fox, and a toilet in Autodesk Maya</li>
+  <li>Modeled pumpkin, table, chair, candle, teddy bear, cello, fox, and a toilet in Autodesk Maya</li>
   <li>Need to import models and update codebase so it integrates with the sphere and cloth collision (ghost)</li>
 </ul>
+
+<h4 id="adding-textures">Adding Textures</h4>
+<ul>
+  <li>Started working on the flickering flame, which will be the shader used on the candle’s flame in the scene</li>
+  <li>Took inspiration from Shadertoy</li>
+</ul>
+
+<p><br></p>
 
 <h2 id="reflection">Reflection</h2>
 <p>Overall, we thought that our ghost cloth appearance is realistic and that the wind effect works well, but there’s a couple of issues with our “ghost” model and signficant details that we’d like to incorporate later on.</p>
@@ -198,6 +214,8 @@
 <p>For modeling, we had to consider how the shader would be overlaid onto the model which made the overall appearance of the pumpkin less detailed than we wanted to, however this is subject to change.</p>
 
 <p>Our biggest hurdle is figuring out how to integrate our models with our current “ghost” collision (consists of a sphere and plane). We recognized that these two objects were able to be in the same scene because they are different <code class="language-plaintext highlighter-rouge">.json</code> files under <code class="language-plaintext highlighter-rouge">/scene</code> but this is tricky to implement with the models we created on Autodesk Maya since they will be converted to <code class="language-plaintext highlighter-rouge">.dae</code> files. We will be going to office hours to get help on this :’).</p>
+
+<p><br></p>
 
 <h2 id="next-steps">Next Steps</h2>
 <p>We are a tiny bit behind schedule for our initial timeline since there were some obstacles that left us stumped for a longer duration than intended.</p>
