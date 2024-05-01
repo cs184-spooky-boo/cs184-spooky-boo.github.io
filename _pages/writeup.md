@@ -186,23 +186,23 @@ We’ve also included texturized versions of all the models for the individual c
 
 <br>
 
-| Table and Chair Set                                                                                               | Pumpkin                                                                                                 | Spider                                                                                             |
-| --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| ![table](/imgs/table.png){:style="display:block; margin-right: auto; width:90%;"} | ![chair](/imgs/chair.png){:style="display:block; margin-right: auto; width:90%;"} | ![pumpkin](/imgs/pumpkin_lambert.png){:style="display:block; margin-right: auto; width:90%;"} |
+| Table                                                                         | Chair                                                                                       | Pumpkin                                                                                  |
+| ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| ![table](/imgs/table.png){:style="display:block; margin-right: auto; width:65%;"}   | ![chair](/imgs/chair.png){:style="display:block; margin-right: auto; width:70%;"}   | ![pumpkin](/imgs/pumpkin_lambert.png){:style="display:block; margin-right: auto; width:70%;"} |
+|                                                                                                      |                                                                                              |                                                                                           |
 
-{:style="margin-bottom: 50px;"}
+| Cobweb                                                                            | Spider                                                                                      | Pillow                                                                                   |
+| ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| ![cobweb](/imgs/spider_spiderweb.png){:style="display:block; margin-right: auto; width:65%;"} | ![spider](/imgs/spider.png){:style="display:block; margin-right: auto; width:65%;"} | ![pillow](/imgs/pillow.png){:style="display:block; margin-right: auto; width:65%;"} |
+|                                                                                                  |                                                                                              |                                                                                          |
 
-| Cobweb                                                                                               | Spider                                                                                                | Pillow                                                                                             |
-| --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| ![cobweb](/imgs/spider_spiderweb.png){:style="display:block; margin-right: auto; width:90%;"} | ![spider](/imgs/spider.png){:style="display:block; margin-right: auto; width:90%;"} | ![pillow](/imgs/pillow.png){:style="display:block; margin-right: auto; width:90%;"} |
+| Toilet                                                                                       | Stuffed Bear                                                                               | Knife                                                                                    |
+| -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
+| ![toilet](/imgs/toilet.png){:style="display:block; margin-right: auto; width:65%;"}   | ![bear](/imgs/bear.png){:style="display:block; margin-right: auto; width:85%;"}   | ![knife](/imgs/knife.png){:style="display:block; margin-right: auto; width:45%;"}   |
+|                                                                                               |                                                                                              |                                                                                           |
 
-{:style="margin-bottom: 50px;"}
 
-| Toilet                                                                                             | Stuffed Bear                                                                                                | Knife                                                                                             |
-| --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| ![toilet](/imgs/toilet.png){:style="display:block; margin-right: auto; width:90%;"} | ![bear](/imgs/bear.png){:style="display:block; margin-right: auto; width:90%;"} | ![knife](/imgs/knife.png){:style="display:block; margin-right: auto; width:90%;"} |
 
-{:style="margin-bottom: 50px;"}
 
 In the models above, we capture the primary realistic features within our scene! You can see the textures and shaders incorporated within each model, as well as the environmental effects on them.
 
@@ -260,7 +260,7 @@ We drew inspiration from another shader created and implemented in-scattering in
 ![bearknife](/imgs/bear-knife.png){:style="display:block; margin-left: auto; margin-right: auto; width:40%;"}
 
 <div style="text-align: center;">
-  Bear (Oski) holding knife, illuminated by scene area light
+  Oski holding knife, illuminated by scene area light — go bears!
 </div>
 
 
