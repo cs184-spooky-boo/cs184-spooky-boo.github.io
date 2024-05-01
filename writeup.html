@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>writeup | CS 184 Final Project</title>
+    <meta name="author" content="  ">
+    <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+">
+    <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%91%BB&lt;/text&gt;&lt;/svg&gt;">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://cs184-spooky-boo.github.io//writeup">
+    
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+    <!-- for mathjax support -->
+    
+      <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+        });
+      </script>
+      <script type="text/javascript" async src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="https://cs184-spooky-boo.github.io//">CS 184 Final Project</a>
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <li class="nav-item ">
+                <a class="nav-link" href="/">proposal</a>
+              </li>
+
+              <li class="nav-item ">
+                <a class="nav-link" href="/milestone">milestone</a>
+              </li>
+
+              <li class="nav-item ">
+                <a class="nav-link" href="/writeup">writeup</a>
+              </li>
+
+              <!-- Toogle theme mode -->
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Scrolling Progress Bar -->
+      <progress id="progress" value="0">
+        <div class="progress-container">
+          <span class="progress-bar"></span>
+        </div>
+      </progress>
+    </header>
+
+    <!-- Content -->
+    <div class="container mt-5">
+      <div class="page">
+  <h1 id="final-report">Final Report</h1>
+
+<p align="center">
+  <img src="/imgs/demo.gif" alt="demo" width="400">
+</p>
+
+<ul>
+  <li><a href="https://docs.google.com/presentation/d/1xKq6KVQC8TmIukwl-QbSxL00Btg_uliY8aruQGrEAgw/edit?usp=sharing" rel="external nofollow noopener" target="_blank">Slides</a></li>
+  <li><a href="https://youtu.be/6FBHB8y-3fM" rel="external nofollow noopener" target="_blank">Recording</a></li>
+</ul>
+
+<p><br></p>
+
+<h2 id="abstract">Abstract</h2>
+
+<p><em>spooky…boo!</em> In our final project, we created a spooky Halloween animation in Autodesk Maya by integrating both dynamic and stationary objects impacted by environmental factors like wind and light shadows to our entire scene. Specifically, this included various components such as our ghost protagonist, <em>Ghosty</em>, moving in the breeze, alongside a wood-textured table and chair set, a hairy spider, a ceiling cobweb, a flickering candle, an illuminated pumpkin, and fog that slowly fills up the room. To the side is a version of <em>Oski</em> sitting on the toilet, suspiciously holding a knife. We ran into a series of obstacles throughout this project where we started with building off of Homework 4’s ClothSim by creating our ghost cloth and wind simulation. After realizing that it’d be unfeasible to continue on that platform, we migrated to Autodesk Maya and Unity to take advantage of Unity’s Universal Render Pipeline and Maya’s Maya Vector Renderer, allowing us to solely focus on the detail of our models and the visual appearance.</p>
+
+<p><br></p>
+
+<h2 id="technical-approach">Technical Approach</h2>
+
+<h4 id="hw4-clothsim">HW4 ClothSim</h4>
+<h5 id="wind">Wind</h5>
+<p>We first added wind simulation by modifying <code class="language-plaintext highlighter-rouge">Cloth::simulate</code> in <code class="language-plaintext highlighter-rouge">cloth.cpp</code>. The idea is to add wind to <code class="language-plaintext highlighter-rouge">external_accelerations</code>, similar to adding the impact of gravity. Wind is defined as a force that acts on the cloth.</p>
+
+<p>In the loop where the point mass positions are updated at each time step, we use the following formula below to calculate wind force which is then added to <code class="language-plaintext highlighter-rouge">pointMass.forces</code>.</p>
+
+\[F_{\text{wind}}(i,j) = C_{\text{wind}} [n_{i,j} \cdot (v_{\text{wind}} - v_{i,j})] n_{i,j}\]
+
+<ul>
+  <li>\(F_{\text{wind}}(i,j)\): Force of wind at position \({(i,j)}\)</li>
+  <li>\(C_{\text{wind}}\): Constant that changes overall wind force</li>
+  <li>\(n_{i,j}\): Normal with <code class="language-plaintext highlighter-rouge">pointMass.normal()</code>
+</li>
+  <li>\(v_{\text{wind}}\): Velocity of the wind</li>
+  <li>\(v_{i,j}\): Velocity of the object at position \({(i,j)}\)</li>
+</ul>
+
+<p><img src="/imgs/wind.gif" alt="wind" style="display:block; margin-left: auto; margin-right: auto; width:50%;"></p>
+
+<h5 id="ghost-cloth">Ghost Cloth</h5>
+<ul>
+  <li>Blinn Phong Shader
+    <ul>
+      <li>Coefficient changes:
+        <ul>
+          <li>Diffuse: No change (wanted to keep the white color)</li>
+          <li>Ambient: Changed to <code class="language-plaintext highlighter-rouge">0</code> so that the base color is black</li>
+          <li>Specular: Increased it</li>
+        </ul>
+      </li>
+      <li>Increase density in GUI to <code class="language-plaintext highlighter-rouge">30 g/m^2</code> to make it slightly heavier</li>
+      <li>Decrease <code class="language-plaintext highlighter-rouge">k_s</code> to <code class="language-plaintext highlighter-rouge">500 N/m</code> for a tighter spring:</li>
+    </ul>
+  </li>
+  <li>Bump mapping: Downloaded a pic of a bed sheet to mimic the nature of a thin sheet without having to render each fiber</li>
+  <li>Extra parameters
+    <ul>
+      <li>Used this <a href="https://manual.keyshot.com/manual/materials/material-types/advanced-material/" rel="external nofollow noopener" target="_blank">article</a> to learn about different material types and as a baseline of what to have the different values equal to
+        <ul>
+          <li>Sheen: Color of our reflection
+            <ul>
+              <li>Set to lighter shade of white to appear brighter</li>
+            </ul>
+          </li>
+          <li>Roughness: Set high since we wanted light to be evenly spread</li>
+          <li>Backscatter: Light scattered throughout the entire object
+            <ul>
+              <li>Provides soft effect</li>
+            </ul>
+          </li>
+          <li>Edginess: How far the sheen spreads across the surface
+            <ul>
+              <li>Set it high to show brighter borders on surface edges (drastic fade)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Changed the length of the cloth to be longer and resemble the shape of a ghost</li>
+</ul>
+
+<p><strong>Pivoting to Unity</strong></p>
+
+<p>After realizing that we’d be unable to import our Maya models into the HW 4 <code class="language-plaintext highlighter-rouge">ClothSim</code>, we pivoted to learning how to work with Unity. This involved watching countless tutorials to understand the interface and how game development worked.</p>
+
+<p><strong>3D Modeling</strong></p>
+
+<p>We primarily used <a href="https://en.wikipedia.org/wiki/Autodesk_Maya#:~:text=Autodesk%20Maya%2C%20commonly%20shortened%20to,macOS%20Big%20Sur%20or%20later" rel="external nofollow noopener" target="_blank">Autodesk Maya</a>, a 3D computer graphics application, as the main tool for rendering objects in our scene. We individually modeled and rendered each object, then combined them into one cohesive scene with a background as our final product. After learning how to use this platform, we discovered all of the features it had and Autodesk Maya seemed like a natural choice because it sped up the implementation of ideas from HW 4 like lambertian shading and the application of textures to object surfaces.</p>
+
+<p><strong>Ghost</strong></p>
+
+<p>For creating the ghost, we used the approach from <a href="https://cs184.eecs.berkeley.edu/sp24/docs/hw4-part-5" rel="external nofollow noopener" target="_blank">shaders (Homework 4 Part 5)</a>, where we created an animated “<code class="language-plaintext highlighter-rouge">n-cloth</code>”, added a couple of holes in it for eyes by deleting individual cells in the cloth, and passively collided it with a stationary sphere (similar to our HW 4 <code class="language-plaintext highlighter-rouge">ClothSim</code>). By modifying friction and gravity parameters, we were able to get it to drop onto the sphere and stay there in a “ghost-like” shape. We also added a “t-shirt” texture to make it a more realistic material and color. Then, by modifying the visible frames and adding wind parameters, we were able to get the ghost to resemble cloth moving in an animated way without needing the cloth to be dropped. We also used the point sculpting tool to make the eyes more droopy, smoothen out wrinkles in the cloth, and make the shape overall more realistic.</p>
+
+<p><strong>Candle</strong></p>
+
+<p>One particularly hard model to create was the candle, since we wanted to make it seem like the candle was dripping wax for a more realistic effect. This required features such as <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-FF7C8670-97C7-4C13-9A6F-3B0A8F881EC9" rel="external nofollow noopener" target="_blank">soft select</a> to fully mold the dripping wax to be as realistic as possible. To add the flickering, we used the <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/index.html?guid=GUID-8FF11EBA-9FDA-4933-B7EB-F08EE1A44284" rel="external nofollow noopener" target="_blank">fluids</a> effect on Autodesk Maya, which creates a fluid emission within a bounding box. By tweaking parameters such as <code class="language-plaintext highlighter-rouge">dissipation</code>, <code class="language-plaintext highlighter-rouge">tension</code>, and <code class="language-plaintext highlighter-rouge">buoyancy</code>, we were able to shape the flame into a more realistic structure and have it phase in and out of opacity and transparency. We also added lighting into the flame so that it would cast light and corresponding shadows into the surrounding environment. Lastly, we added a texture to the candle base using an imported image to fully replicate it’s real-life appearance.</p>
+
+<p><strong>Fog</strong></p>
+
+<p>Since we were individually modeling various aspects of the scene, this allowed us to all learn how to use Autodesk Maya. Specifically, the candle and fog both utilized the fluids effect but in slightly different manners. The <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-52D0F71E-4C2C-4615-8F8F-5C96EE326958" rel="external nofollow noopener" target="_blank">3D container</a> adds an emitter by default which is the source of the fog/smoke. By modifying the container to fit the size of our scene, this enables the fog to slowly fill up the room to create a more ethereal effect. There were a variety of parameters that were tweaked such as <code class="language-plaintext highlighter-rouge">dissipation</code>, <code class="language-plaintext highlighter-rouge">diffusion</code>, <code class="language-plaintext highlighter-rouge">buoyancy</code>, <code class="language-plaintext highlighter-rouge">noise</code>, <code class="language-plaintext highlighter-rouge">turbulence</code>, <code class="language-plaintext highlighter-rouge">velocity</code>, etc but the most impactful attribute was the <code class="language-plaintext highlighter-rouge">density</code> scale since this controlled the amount and severity of the fog within the room.</p>
+
+<p><strong>Other 3D Models</strong></p>
+
+<p>After modeling a spider in the scene, we added details such as hair using the <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-C0470142-600B-4615-8110-EC779934DF5F" rel="external nofollow noopener" target="_blank">XGen Interactive Groom Editor</a> in Autodesk Maya, a built-in feature which creates hair-like strands on a selected surface. The editor enabled us to change parameters like <code class="language-plaintext highlighter-rouge">taper</code>, <code class="language-plaintext highlighter-rouge">width</code>, <code class="language-plaintext highlighter-rouge">height</code>, and <code class="language-plaintext highlighter-rouge">noise</code>, allowing us to emulate the short hairs on a spider like a tarantula.</p>
+
+<p>With more familiarity in using the platform, we relied less on referencing modeling tutorials and instead created the 3D representations ourselves which includes:</p>
+
+<ul>
+  <li>Table and chair set</li>
+  <li>Pumpkin</li>
+  <li>Spider</li>
+  <li>Cobweb</li>
+  <li>Window</li>
+  <li>Pillow</li>
+  <li>Toilet</li>
+  <li>Stuffed bear</li>
+  <li>Knife</li>
+</ul>
+
+<p><br></p>
+
+<h2 id="challenges">Challenges</h2>
+
+<p>As this was all of our first times working with Autodesk Maya and Unity, we ran into a number of challenges:</p>
+
+<p><strong>Ghost</strong></p>
+
+<p>In terms of making the ghost move with wind, we had trouble finding the correct wind speed and direction as well as trying to animate an object after deleting object history. Since the cloth started above the sphere and dropped onto the cloth, the wind effect caused the cloth to often fall off-center. The eyes would also get covered if the wind speed was too intense. After playing around with the parameters, we found the optimal sphere position and wind <code class="language-plaintext highlighter-rouge">X</code> direction for the ghost shape to look symmetrical.</p>
+
+<p>We ran into several issues using OpenGL to make different shaders and textures, in addition to applying them to the models in Maya. For example, we were able to make two different shaders for the ghost — one involves fully custom values and creating the shader from scratch, while the other is a texture shader that applies an image to the object.</p>
+
+<p>Essentially, Maya allows us to use a rendering system called Viewport 2.0, in which we can use the engine “<em>OpenGL - Core Profile (Strict)</em>”. We could also load in the <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-BD177012-56E1-43D0-B7A5-F4B1A70EA846" rel="external nofollow noopener" target="_blank">glslShader plug-in</a> for the full functionality. With this, the software allows us to assign a new material to an object with a GLSL shader. However, within this shader, it wants an input of an <code class="language-plaintext highlighter-rouge">.ogsfx</code> file instead of two separate <code class="language-plaintext highlighter-rouge">.frag</code> and <code class="language-plaintext highlighter-rouge">.vert</code> files that we are accustomed to. This led us on a trail of (somewhat) useless pages of Maya documentation, which unfortunately did not have the adequate information that we needed (though we have put these various links in References below). The <code class="language-plaintext highlighter-rouge">.ogsfx</code> files almost had their entirely distinct syntax and the documentation for it was very sparse. We were actually able to create a <code class="language-plaintext highlighter-rouge">.ogsfx</code> file for our textured shader that we created for the ghost, but even after hours of research and coding, we were unable to do so for the custom shader. Therefore, we just ended up applying our GLSL texture shader to some of the objects in our final scene.</p>
+
+<p><strong>Flickering Flame</strong></p>
+
+<p>In our original implementation, we attempted to draw inspiration from code found from <a href="https://www.shadertoy.com/view/ltXyDM" rel="external nofollow noopener" target="_blank">ShaderToy</a> within our HW 4’s codebase to create a new shader producing an animated flame with flickering light. Realizing that it would be difficult to integrate our other components, we switched to Autodesk Maya, on which we modeled a candlestick and simulated a flame using FX fluids. In the fluid, we changed parameters like <code class="language-plaintext highlighter-rouge">buoyancy</code>, <code class="language-plaintext highlighter-rouge">tension</code>, and <code class="language-plaintext highlighter-rouge">dissipation</code> to simulate the movement of a flame as it is impacted by wind.</p>
+
+<p><strong>Spider</strong></p>
+
+<p>We worked with <a href="https://help.autodesk.com/view/MAYAUL/2024/ENU/?guid=GUID-496603B0-F929-45CD-B607-1CFCD3283DBE" rel="external nofollow noopener" target="_blank">Maya’s XGen Interactive Groom</a> effect to add and tweak the hair found on a spider’s legs. We changed parameters like <code class="language-plaintext highlighter-rouge">noise</code>, <code class="language-plaintext highlighter-rouge">taper</code>, <code class="language-plaintext highlighter-rouge">width</code>, and <code class="language-plaintext highlighter-rouge">length</code> for the hair on the spider’s legs as well as added a Lambert texture to the spider’s body.</p>
+
+<p><strong>Volumetric Fog</strong></p>
+
+<p>In essence, volumetric fog is a rendering feature that simulates light transmission through a scene that contains fog. This [paper] (https://cglearn.eu/pub/advanced-computer-graphics/volumetric-rendering) is a phenomenal explanation of how the various aspects work together.</p>
+
+<p><img src="/imgs/inscattering.png" alt="inscattering"></p>
+
+<p><em>Unity</em></p>
+
+<p>Since we had zero experience with Unity, we attempted to watch a few tutorial videos because we had no idea what language the platform utilized, let alone how to navigate through the user interface. After understanding how Unity (somewhat) worked, our plan was to integrate our Maya models into one scene then import that <code class="language-plaintext highlighter-rouge">.ma</code> file into Unity. This would allow us to add the physical effects on our components as desired (ex: wind) because if we did that in Maya, the differing animations for each individual object would overlap.</p>
+
+<p>However when attempting this, more problems arose. For instance, models were imported into Unity with obvious aliasing that we couldn’t fix and textures would get manipulated incorrectly. Since each model was imported as an entire object, we weren’t able to directly work with individual components of the object (ex: stem of the pumpkin).</p>
+
+<p>We referenced countless videos, tutorials, and papers (see References) to attempt salvaging all of the hard work we had already done but we were unable to fully incorporate the volumetric fog with our prototype models. After utilizing this <a href="https://catlikecoding.com/unity/tutorials/rendering/part-14/" rel="external nofollow noopener" target="_blank">Unity tutorial</a>, we attempted incorporating all of the different fog types (linear, exponential, depth-based, etc) into Unity.</p>
+
+<p><em>Autodesk Maya</em></p>
+
+<p>After realizing it was near impossible to figure out integrating volumetric fog with our terribly imported Maya models into Unity, we pivoted to using Maya. The biggest problem was adjusting the parameters to make the fog look realistic since the 3D container prohibited the smoke from traveling upwards, but the density needed to be high enough so the fog would be visible.</p>
+
+<p><strong>Unity vs. Autodesk Maya</strong></p>
+
+<p>After suggestions from multiple TAs, we attempted to integrate volumetric fog in Unity because it is one of the preferred platforms for game development. Since this would ultimately result in a visually appealing outcome, we decided to take the risk and attempt to learn two new platforms. Our plan was to first model everything in Autodesk Maya and attempt to have them as detailed as possible, intending for us to have “less” work in Unity after importing the Maya models.</p>
+
+<p>Unity (typically used for game development) resulted in having too steep of a learning curve even though it was initially recommended for helping make a cohesive scene. We realized that Maya supported applying external forces (eg. wind, fog) to individual objects, and supported importing multiple existing Maya models into a single scene — hence why we tried to do everything in Maya.</p>
+
+<p>When attempting to integrate the Maya models to Unity, the first issue we ran into was having our Maya models imported incorrectly – the pumpkin for instance ended up being very “spiky” despite not appearing that way in Maya. Issue after issue, we had hope that Unity would end up being a possibility but it ended up being unfeasible.</p>
+
+<p><br></p>
+
+<h2 id="lessons-learned">Lessons Learned</h2>
+
+<p>We learned a lot in this project! Here are a few:</p>
+
+<ol>
+  <li>Modeling on Autodesk Maya and developing on Unity.</li>
+  <li>Though technology is incredibly advanced these days, integration is not seamless.</li>
+  <li>Animation is fun - there are a lot of creative avenues!</li>
+  <li>Organization of models into its components to make “debugging” our models simpler</li>
+  <li>Choosing the right parameters (e.g. <code class="language-plaintext highlighter-rouge">density</code>, <code class="language-plaintext highlighter-rouge">diffusion</code>, <code class="language-plaintext highlighter-rouge">noise</code>) is really important for realistic simulations.</li>
+  <li>Pair programming is difficult when modeling/animating.</li>
+</ol>
+
+<p>The majority of us were new to Autodesk Maya as a development platform, so it took a bit of time to get used to the various tools, including how to add surfaces, translate/rotate objects, <code class="language-plaintext highlighter-rouge">n-cloth</code> properties, curves, fluids, hair simulation, and other external effects. Modeling the objects also proved to be quite challenging, especially since Maya has such a steep learning curve. There are countless tools to use, and even with following some tutorials, it took a bit of time to get used to the software. But ultimately, we can to appreciate Maya’s highly personable interface — it allows you to make customizable animations and models — we found that the best way to add as much detail in our scene was rendering each object individually with as many details and effects as needed before combining with other objects to ensure effects and textures are only applied as necessary.</p>
+
+<p>We attempted to use the HW 4 starter code but ran into a number of issues with trying to merge shaders, textures, and models; we switched instead to Autodesk Maya so that we could more seamlessly integrate models with textures, shaders, and other effects.</p>
+
+<p>We can use effects like fluids, <code class="language-plaintext highlighter-rouge">n-cloth</code>, <code class="language-plaintext highlighter-rouge">n-nucleus</code>, and XGen hair simulation to make our scene more realistic; for example, we used fluids to emulate a flame and XGen to emulate the hair on a spider’s body. We also imported images as textures for other objects in our scene, such as the table and the chair.</p>
+
+<p>We learned the different capabilities that Maya has with adding custom shaders and textures. For the <code class="language-plaintext highlighter-rouge">.ogsfx</code> files, we learned how to write the corresponding syntax, and how we might have to edit the <code class="language-plaintext highlighter-rouge">.frag</code> and <code class="language-plaintext highlighter-rouge">.vert</code> files to get to the correct file type.</p>
+
+<p>While there is some overlap between software development and game development/animation, one observation is the inability to pair-program when modeling. We noticed during group worksessions that it was helpful to bounce ideas off of one another or ask for modeling tips but unlike general software development practices, it’s nearly impossible and inefficient to “pair-model” (for the lack of a better term). Additionally, modeling took up a significant amount of time due to our lack of experience.</p>
+
+<p><br></p>
+
+<h2 id="final-results">Final Results</h2>
+
+<div style="text-align: center;">
+  <iframe width="560" height="415" src="https://www.youtube.com/embed/xX8AJin5Wz4" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+<p>In the models below, we capture the primary realistic features within our scene! You can see the textures and shaders incorporated within each model, as well as the environmental effects on them.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Table and Chair Set</th>
+      <th>Pumpkin</th>
+      <th>Spider</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="/imgs/table.png" alt="table" style="display:block; margin-right: auto; width:90%;"></td>
+      <td><img src="/imgs/chair.png" alt="chair" style="display:block; margin-right: auto; width:90%;"></td>
+      <td><img src="/imgs/pumpkin_lambert.png" alt="pumpkin" style="display:block; margin-right: auto; width:90%;"></td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="margin-bottom: 50px;">
+  <thead>
+    <tr>
+      <th>Cobweb</th>
+      <th>Spider</th>
+      <th>Pillow</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="/imgs/spider_spiderweb.png" alt="cobweb" style="display:block; margin-right: auto; width:90%;"></td>
+      <td><img src="/imgs/spider.png" alt="spider" style="display:block; margin-right: auto; width:90%;"></td>
+      <td><img src="/imgs/pillow.png" alt="pillow" style="display:block; margin-right: auto; width:90%;"></td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="margin-bottom: 50px;">
+  <thead>
+    <tr>
+      <th>Toilet</th>
+      <th>Stuffed Bear</th>
+      <th>Knife</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="/imgs/toilet.png" alt="toilet" style="display:block; margin-right: auto; width:90%;"></td>
+      <td><img src="/imgs/bear.png" alt="bear" style="display:block; margin-right: auto; width:90%;"></td>
+      <td><img src="/imgs/knife.png" alt="knife" style="display:block; margin-right: auto; width:90%;"></td>
+    </tr>
+  </tbody>
+</table>
+
+<p style="margin-bottom: 50px;"><img src="/imgs/unity-jaggies.png" alt="unity-jaggies" style="display:block; margin-left: auto; margin-right: auto; width:90%;"></p>
+
+<p><img src="/imgs/unity-light.png" alt="unity-light" style="display:block; margin-left: auto; margin-right: auto; width:90%;"></p>
+
+<p><img src="/imgs/unity-fog.png" alt="unity-fog" style="display:block; margin-left: auto; margin-right: auto; width:90%;"></p>
+
+<p><img src="/imgs/candle_flame.gif" alt="flame" style="display:block; margin-left: auto; margin-right: auto; width:90%;"></p>
+
+<p><img src="/imgs/lighting.gif" alt="lighting" style="display:block; margin-left: auto; margin-right: auto; width:90%;"></p>
+
+<p><img src="/imgs/fog.gif" alt="fog" style="display:block; margin-left: auto; margin-right: auto; width:90%;"></p>
+
+<p><img src="/imgs/bear-knife.png" alt="bearknife" style="display:block; margin-left: auto; margin-right: auto; width:90%;"></p>
+
+<p><br></p>
+
+<h2 id="references">References</h2>
+
+<p>We utilized a lot of tutorials initally and referenced documentation on how the tools in Autodesk Maya and Unity worked. When initially building on the HW 4 <code class="language-plaintext highlighter-rouge">ClothSim</code> and Unity, we referenced papers as well.</p>
+
+<ul>
+  <li>Autodesk Maya Help Pages
+    <ul>
+      <li><a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/" rel="external nofollow noopener" target="_blank">General help page</a></li>
+      <li><a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-E6B32DC8-DDA5-47A8-9F22-2975786B7ABA" rel="external nofollow noopener" target="_blank">Wind effects for nCloth</a></li>
+    </ul>
+  </li>
+  <li>GLSL Resources
+    <ul>
+      <li><a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/index.html?guid=GUID-0A3159BB-7A7E-4407-AA5B-2F22FF7D33B8" rel="external nofollow noopener" target="_blank">Using the include directive in an ogsfx file to load your vertex and fragment shaders</a></li>
+      <li><a href="https://help.autodesk.com/view/MAYAUL/2024/ENU/?guid=Maya_SDK_Writing_a_Hardware_Shading_Node_Creating_GLSL_hardware_shaders_Convert_existing_GLSL_shaders_to_html" rel="external nofollow noopener" target="_blank">Convert existing GLSL shaders to OGSFX format</a></li>
+      <li><a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-F81B34C5-30B8-4784-8351-F252006C42D8" rel="external nofollow noopener" target="_blank">Write a custom GLSL shader: texturing, transparency, lighting and hardware selection example</a></li>
+      <li><a href="https://help.autodesk.com/view/MAYAUL/2024/ENU/?guid=Maya_SDK_Viewport_2_0_API_Semantics_and_annotations_html" rel="external nofollow noopener" target="_blank">Semantics and annotations supported by the dx11Shader and glslShader plug-ins in Viewport 2.0</a></li>
+    </ul>
+  </li>
+  <li>Autodesk Maya Modeling Tutorials/Inspiration
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=PcMdObJMEuI" rel="external nofollow noopener" target="_blank">Lighting</a></li>
+      <li><a href="https://www.youtube.com/watch?v=xE66r1gfctE" rel="external nofollow noopener" target="_blank">Candle and flame</a></li>
+      <li><a href="https://www.youtube.com/watch?v=033CCW3fiNY" rel="external nofollow noopener" target="_blank">Spiderweb</a></li>
+      <li><a href="https://www.youtube.com/watch?v=CyVhZKmuMoY" rel="external nofollow noopener" target="_blank">Ghost</a></li>
+      <li><a href="https://youtu.be/SBTb61d6BJA?si=nvAKdqvMZwH6Exy9" rel="external nofollow noopener" target="_blank">Smoke/Fog</a></li>
+      <li><a href="https://youtu.be/iy65qZldMKQ?si=ZmfN3w1Vei_wFBy6" rel="external nofollow noopener" target="_blank">Pumpkin</a></li>
+      <li><a href="https://youtu.be/y__tsqaKxxk?si=elpT5iWdmeZuVE03" rel="external nofollow noopener" target="_blank">Pillow</a></li>
+    </ul>
+  </li>
+  <li>Volumetric Fog
+    <ul>
+      <li><a href="https://cglearn.eu/pub/advanced-computer-graphics/volumetric-rendering" rel="external nofollow noopener" target="_blank">Volumetric Rendering</a></li>
+      <li><a href="https://cs.gmu.edu/~jchen/cs662/fog.pdf" rel="external nofollow noopener" target="_blank">Real-Time Fog using Post-processing in OpenGL</a></li>
+      <li><a href="https://catlikecoding.com/unity/tutorials/rendering/part-14/" rel="external nofollow noopener" target="_blank">Fog Rendering in Unity</a></li>
+      <li><a href="https://youtu.be/SXaa61JWLDw?si=O0oMMzY1GdRtsWz6" rel="external nofollow noopener" target="_blank">Unity Basics</a></li>
+    </ul>
+  </li>
+  <li>Autodesk Maya Python Scripting
+    <ul>
+      <li><a href="https://medium.com/take-a-bite-of-bits-and-bytes/intro-to-python-scripting-for-maya-e02ba87175b5" rel="external nofollow noopener" target="_blank">Intro to Python Scripting for Maya</a></li>
+      <li><a href="https://youtu.be/eXFGeZZbMzQ?si=CqeypMDL35Hkwzz8" rel="external nofollow noopener" target="_blank">Introduction to Python Scripting in Maya</a></li>
+    </ul>
+  </li>
+  <li>HW 4 Cloth
+    <ul>
+      <li><a href="https://google.github.io/filament/Materials.html#materialmodels/litmodel/sheencolor" rel="external nofollow noopener" target="_blank">Filament Materials Guide</a></li>
+      <li><a href="https://manual.keyshot.com/manual/materials/material-types/advanced-material/velvet/" rel="external nofollow noopener" target="_blank">Velvet Keyshot Manual</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p><br></p>
+
+<h2 id="contributions">Contributions</h2>
+
+<ul>
+  <li>
+    <p><strong>Christy Quang</strong>: I worked on building off of the HW 4 codebase initially by incorporating wind simulation to our cloth, as well as creating custom shaders to realistically represent the ghost cloth and sheen. After discovering that continuing on this codebase was unreasonable, we migrated completely over to Autodesk Maya where I added textures to our models. A majority of my time was spent trying to incorporate our Maya models into Unity but this ended up being infeasible and unrealistic since the imported models were not as visually appealing as they were in Autodesk Maya. Instead, I added fog to our Maya scene and contributed to the writeup, video, and slides for our milestone and final presentations, as well as hosting/updating our website.</p>
+  </li>
+  <li>
+    <p><strong>Anya Agarwal</strong>: I modeled a lot of the objects, such as the table, candle, chair, and pumpkin. I also worked a lot of researching and attempting to put our GLSL shaders into Autodesk Maya to apply them to our models. In the end, I created a few textured shaders written in a <code class="language-plaintext highlighter-rouge">.ogsfx</code> file. I helped assemble and add the final shaders to the final scene, as well as contributed to the writeup, video, and slides for our milestone and final presentation.</p>
+  </li>
+  <li>
+    <p><strong>Tia Jain</strong>: I made the ghost by colliding an n-cloth with a sphere, tweaking parameters like wind, friction, damping, gravity, and texture to get it looking right. I also modeled the knife for our bear to hold. I helped combine the animated ghost with the table and pumpkin, as the first step in making it a cohesive scene. I also worked a lot on the milestone and final deliverables, describing our overall project and technical details.</p>
+  </li>
+  <li>
+    <p><strong>Janani Sriram</strong>: I created the fluids effect on Autodesk Maya for the candle flame, including tweaking parameters like tension, dissipation, and color to create a realistic visualization of a flame. I also modeled and textured the spider with a Lambert shader and the XGen Interactive Groom tool for hair on the spider’s legs. In addition, I modeled the spiderweb at the top left corner of the scene. Lastly, I helped compile the individual attributes of our scene into a final product, as well as contributed to the writeup and video.</p>
+  </li>
+</ul>
+
+</div>
+    </div>
+
+    <!-- Footer -->
+<footer class="fixed-bottom">
+  <div class="container mt-0">
+    © Copyright 2024.    Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>.
+
+  </div>
+</footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Bootsrap & MDB scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+    <!-- Masonry & imagesLoaded -->
+<script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+    
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js"></script><!-- Load Common JS -->
+  <script defer src="/assets/js/common.js"></script>
+  <script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+    
+    <!-- MathJax -->
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      tags: 'ams'
+    }
+  };
+</script>
+<script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+<script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    
+    
+
+<!-- Scrolling Progress Bar -->
+<script type="text/javascript">
+  /*
+   * This JavaScript code has been adapted from the article 
+   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
+   * published on the website https://css-tricks.com on the 7th of May, 2014.
+   * Couple of changes were made to the original code to make it compatible 
+   * with the `al-foio` theme.
+   */
+  const progressBar = $("#progress");
+  /*
+   * We set up the bar after all elements are done loading.
+   * In some cases, if the images in the page are larger than the intended
+   * size they'll have on the page, they'll be resized via CSS to accomodate
+   * the desired size. This mistake, however, breaks the computations as the
+   * scroll size is computed as soon as the elements finish loading.
+   * To account for this, a minimal delay was introduced before computing the
+   * values.
+   */
+  window.onload = function () {
+    setTimeout(progressBarSetup, 50);
+  };
+  /*
+   * We set up the bar according to the browser.
+   * If the browser supports the progress element we use that.
+   * Otherwise, we resize the bar thru CSS styling
+   */
+  function progressBarSetup() {
+    if ("max" in document.createElement("progress")) {
+      initializeProgressElement();
+      $(document).on("scroll", function() {
+        progressBar.attr({ value: getCurrentScrollPosition() });
+      });
+      $(window).on("resize", initializeProgressElement);
+    } else {
+      resizeProgressBar();
+      $(document).on("scroll", resizeProgressBar);
+      $(window).on("resize", resizeProgressBar);
+    }
+  }
+  /*
+   * The vertical scroll position is the same as the number of pixels that
+   * are hidden from view above the scrollable area. Thus, a value > 0 is
+   * how much the user has scrolled from the top
+   */
+  function getCurrentScrollPosition() {
+    return $(window).scrollTop();
+  }
+
+  function initializeProgressElement() {
+    let navbarHeight = $("#navbar").outerHeight(true);
+    $("body").css({ "padding-top": navbarHeight });
+    $("progress-container").css({ "padding-top": navbarHeight });
+    progressBar.css({ top: navbarHeight });
+    progressBar.attr({
+      max: getDistanceToScroll(),
+      value: getCurrentScrollPosition(),
+    });
+  }
+  /*
+   * The offset between the html document height and the browser viewport
+   * height will be greater than zero if vertical scroll is possible.
+   * This is the distance the user can scroll
+   */
+  function getDistanceToScroll() {
+    return $(document).height() - $(window).height();
+  }
+
+  function resizeProgressBar() {
+    progressBar.css({ width: getWidthPercentage() + "%" });
+  }
+  // The scroll ratio equals the percentage to resize the bar
+  function getWidthPercentage() {
+    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
+  }
+</script>
+  </body>
+</html>
