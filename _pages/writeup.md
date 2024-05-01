@@ -126,7 +126,7 @@ We worked with [Maya’s XGen Interactive Groom](https://help.autodesk.com/view/
 
 In essence, volumetric fog is a rendering feature that simulates light transmission through a scene that contains fog. This [paper] (https://cglearn.eu/pub/advanced-computer-graphics/volumetric-rendering) is a phenomenal explanation of how the various aspects work together.
 
-![inscattering](/imgs/inscattering.png)
+![inscattering](/imgs/inscattering.png){:style="display:block; margin-left: auto; margin-right: auto; width:70%;"}
 
 *Unity*
 
@@ -179,7 +179,12 @@ While there is some overlap between software development and game development/an
   <iframe width="560" height="415" src="https://www.youtube.com/embed/xX8AJin5Wz4" frameborder="0" allowfullscreen></iframe>
 </div>
 
-In the models below, we capture the primary realistic features within our scene! You can see the textures and shaders incorporated within each model, as well as the environmental effects on them.
+<br>
+
+For our final results, please watch our demo video above — you can also see the animated ghost and candle in action! 
+We’ve also included texturized versions of all the models for the individual components in our scene, to show all the colors, shaders, and details in normal light. In particular, we wanted to draw attention to the hairs on the spider’s legs, the strands that compose the cobweb, and our custom GLSL shader for the pumpkin, since these aren’t as visible in the demo video.
+
+<br>
 
 | Table and Chair Set                                                                                               | Pumpkin                                                                                                 | Spider                                                                                             |
 | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
@@ -199,22 +204,64 @@ In the models below, we capture the primary realistic features within our scene!
 
 {:style="margin-bottom: 50px;"}
 
+In the models above, we capture the primary realistic features within our scene! You can see the textures and shaders incorporated within each model, as well as the environmental effects on them.
 
-![unity-jaggies](/imgs/unity-jaggies.png){:style="display:block; margin-left: auto; margin-right: auto; width:90%;"}
+### Unity Results
 
-![unity-light](/imgs/unity-light.png){:style="display:block; margin-left: auto; margin-right: auto; width:90%;"}
+<div style="display: flex; justify-content: center;">
+  <div style="width: 50%;">
+    <img src="/imgs/unity-jaggies.png" alt="unity-jaggies" style="width: 100%;">
+  </div>
+  <div style="width: 50%;">
+    <img src="/imgs/unity-light.png" alt="unity-light" style="width: 100%;">
+  </div>
+</div>
 
+<div style="display: flex; justify-content: center;">
+  <div style="width: 100%;">
+    <img src="/imgs/unity-fog.png" alt="unity-fog" style="width: 100%;">
+  </div>
+</div>
 
-![unity-fog](/imgs/unity-fog.png){:style="display:block; margin-left: auto; margin-right: auto; width:90%;"}
+<br>
 
+Our results from working on the HW 4 codebase are shown above but immediately afterwards, we pivoted to working on Unity. As seen in the top left image, there is obvious "spiky" from the pumpkin's surface, the textures aren't imported in, and the ghost's animation is missing as well. On the top right, we attempted to incorporate the sun's ray shining on the scene but there were too many bugs faced.
 
-![flame](/imgs/candle_flame.gif){:style="display:block; margin-left: auto; margin-right: auto; width:90%;"}
+We drew inspiration from another shader created and implemented in-scattering into the codebase. It is visually appealing but the biggest problem still existed - being able to integrate our own Maya models into Unity. Due to time constraints and being unable to fully integrate them, we switched to Autodesk Maya.
 
-![lighting](/imgs/lighting.gif){:style="display:block; margin-left: auto; margin-right: auto; width:90%;"}
+<br>
 
-![fog](/imgs/fog.gif){:style="display:block; margin-left: auto; margin-right: auto; width:90%;"}
+### Scene Highlights
 
-![bearknife](/imgs/bear-knife.png){:style="display:block; margin-left: auto; margin-right: auto; width:90%;"}
+![flame](/imgs/candle_flame.gif){:style="display:block; margin-left: auto; margin-right: auto; width:35%;"}
+
+<div style="text-align: center;">
+  Textured candle base with fluids-inspired flame, flickering in the wind and emitting light
+</div>
+
+<br>
+
+<div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+  <img src="/imgs/lighting.gif" alt="lighting" style="width: 48%;">
+  <img src="/imgs/fog.gif" alt="fog" style="width: 48%;">
+</div>
+
+<div style="display: flex; justify-content: space-between;">
+  <div style="text-align: center; width: 48%;">
+    Final scene with all elements integrated together, illuminated with area lights directed through the window. The lights are toggled on/off to showcase the lighting effects on all of our models.
+  </div>
+  <div style="text-align: center; width: 48%;">
+    Cloth simulation-based ghost with moving fabric, illuminated by scene area light and showcasing the diffusion of the fog.
+  </div>
+</div>
+
+<br>
+
+![bearknife](/imgs/bear-knife.png){:style="display:block; margin-left: auto; margin-right: auto; width:40%;"}
+
+<div style="text-align: center;">
+  Bear (Oski) holding knife, illuminated by scene area light
+</div>
 
 
 <br>
